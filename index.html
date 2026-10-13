@@ -39,7 +39,7 @@
           <h1 id="hero-title">I understand how operations run,<br><em>and I build the systems that fit.</em></h1>
           <p class="hero-lead">I design workflow automation, internal tools, databases and integrations around how businesses actually operate. My 25+ years managing real operations means I understand the exceptions, approvals and people behind the process—not just the software.</p>
           <div class="hero-actions"><a class="button button-primary" href="#services">See what I offer <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#contact">Discuss a project <span aria-hidden="true">↗</span></a></div>
-          <div class="hero-notes"><span><strong>25+ years</strong> in operations and management</span><span class="hero-notes-divider" aria-hidden="true"></span><span><strong>5 projects</strong> built around real operations</span></div>
+          <div class="hero-notes"><span><strong>25+ years</strong> in operations and management</span><span class="hero-notes-divider" aria-hidden="true"></span><span><strong>6 projects</strong> built around real operations</span></div>
         </div>
         <div class="hero-visual" aria-label="Services offered">
           <div class="visual-topline"><span><span class="visual-pulse"></span> SERVICES</span><span>PROJECT-BASED</span></div>
@@ -65,78 +65,42 @@
     </section>
     <section class="section work-section" id="work" aria-labelledby="work-title">
       <div class="container">
-        <div class="section-heading"><div><p class="section-kicker">SELECTED WORK</p><h2 id="work-title">Five projects built for everyday operations problems.</h2></div><p class="section-intro">Agriculture, commerce, field service, process analysis, and order integration. Explore public demos or verified integration evidence; each card explains what is available.</p></div>
+        <div class="section-heading"><div><p class="section-kicker">SELECTED WORK</p><h2 id="work-title">Systems built around real operations.</h2></div><p class="section-intro">Explore business systems, workflow integrations and process tools. Filter by the capability your team needs; each project explains its demonstration and verified scope.</p></div>
+        <div class="project-filters" role="group" aria-label="Filter projects by business capability" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">All Projects</button>
+          <button type="button" data-filter="systems" aria-pressed="false">Business Systems &amp; ERP Integration</button>
+          <button type="button" data-filter="automation" aria-pressed="false">Workflow Automation &amp; APIs</button>
+          <button type="button" data-filter="analysis" aria-pressed="false">Process Analysis &amp; Internal Tools</button>
+        </div>
+        <p class="filter-result" aria-live="polite" aria-atomic="true">Showing all 6 projects.</p>
         <div class="project-grid">
-          <article class="project-card project-featured">
-            <a class="project-image ecomm-image" href="https://ecommerce-ops-control-center.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open E-commerce Operations Control Center demo in new tab"><img src="assets/ecommerce-dashboard.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/mediads786/ecommerce-ops-control-center/main/public/screenshots/dashboard.png'" alt="E-commerce operations dashboard showing orders, revenue, pending work and low-stock indicators" loading="lazy"><span class="image-corner" aria-hidden="true">↗</span></a>
-            <div class="project-content"><div class="project-meta"><span>COMMERCE</span><span class="project-tag">READ-ONLY DEMO</span></div><h3>E-commerce Operations<br>Control Center</h3><p>Order lifecycle, inventory integrity, operational reporting, and scheduled low-stock monitoring for a multi-channel commerce workflow.</p><div class="project-stack">NEXT.JS <span>·</span> SUPABASE <span>·</span> N8N</div><div class="project-links"><a href="https://ecommerce-ops-control-center.vercel.app/" target="_blank" rel="noopener noreferrer">Explore demo <span aria-hidden="true">↗</span></a><a href="https://github.com/mediads786/ecommerce-ops-control-center" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          <article class="project-card gateway-feature" id="order-gateway-api" data-categories="systems automation">
+            <a aria-label="Explore Order Gateway API" class="project-image gateway-image" href="projects/order-gateway-api.html"><img src="assets/order-gateway-api-card.jpg" alt="Actual current Order Gateway API interface showing two synthetic orders confirmed, including recovery on attempt four; customer fields concealed." width="1440" height="900" loading="lazy"><span class="image-corner" aria-hidden="true">↗</span></a>
+            <div class="project-content"><div class="project-meta"><span>ERP OPERATIONS &amp; GOVERNANCE</span></div><h3>Order Gateway API</h3><p>Keep ERP deliveries traceable and sensitive actions under control.</p><div class="project-links"><a href="projects/order-gateway-api.html">Explore Project <span aria-hidden="true">↗</span></a></div></div>
           </article>
-          <article class="project-card">
-            <a class="project-image friofix-image" href="https://service-triage-copilot.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open FrioFix demo in new tab"><img src="assets/friofix-dashboard.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/mediads786/service-triage-copilot/main/docs/images/dashboard.png'" alt="FrioFix field-service operations dashboard showing service activity and job status" loading="lazy"><span class="image-corner" aria-hidden="true">↗</span></a>
-            <div class="project-content"><div class="project-meta"><span>FIELD SERVICE</span><span class="project-tag">READ-ONLY DEMO</span></div><h3>FrioFix</h3><p>Service intake, AI-assisted triage with human review, mechanic assignment, job visibility, inventory, and invoice records for refrigeration service operations.</p><div class="project-stack">FASTAPI <span>·</span> REACT <span>·</span> POSTGRESQL</div><div class="project-links"><a href="https://service-triage-copilot.vercel.app/" target="_blank" rel="noopener noreferrer">Explore demo <span aria-hidden="true">↗</span></a><a href="https://github.com/mediads786/service-triage-copilot" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          <article class="project-card gateway-feature" id="order-gateway-n8n" data-categories="systems automation">
+            <a aria-label="Explore Order Gateway — n8n + PostgreSQL" class="project-image gateway-image" href="projects/order-gateway-n8n.html"><img class="project-preview-workflow" src="assets/order-gateway-n8n-intake-preview.jpg" alt="Actual n8n Shopify order-intake workflow with HMAC checks, validation and PostgreSQL acceptance." width="1900" height="470" loading="lazy"><span class="image-corner" aria-hidden="true">↗</span></a>
+            <div class="project-content"><div class="project-meta"><span>ORDER INTEGRATION &amp; ALERTS</span></div><h3>Order Gateway — n8n + PostgreSQL</h3><p>Keep accepted orders safe and failed deliveries visible.</p><div class="project-links"><a href="projects/order-gateway-n8n.html">Explore Project <span aria-hidden="true">↗</span></a></div></div>
           </article>
-          <article class="project-card">
-            <a class="project-image farmflow-image" href="https://farm-flow-wheat.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open FarmFlow public showcase in new tab"><img src="assets/farmflow-dashboard.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/mediads786/FarmFlow/main/docs/screenshots/dashboard.png'" alt="FarmFlow cattle operations dashboard showing inventory, shipment readiness and reporting" loading="lazy"><span class="image-corner" aria-hidden="true">↗</span></a>
-            <div class="project-content"><div class="project-meta"><span>AGRICULTURE</span><span class="project-tag">PUBLIC SHOWCASE · VIEW ONLY</span></div><h3>FarmFlow</h3><p>Cattle purchases, induction, live inventory, shipments, mortality, and management reports in one system, with bulk entry for purchases.</p><div class="project-stack">FLUTTER <span>·</span> SUPABASE <span>·</span> POSTGRESQL</div><div class="project-links"><a href="https://farm-flow-wheat.vercel.app/" target="_blank" rel="noopener noreferrer">Explore showcase <span aria-hidden="true">↗</span></a><a href="https://github.com/mediads786/FarmFlow" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          <article class="project-card" id="ecommerce-operations" data-categories="systems automation">
+            <a aria-label="Explore E-commerce Operations Control Center" class="project-image ecomm-image" href="projects/ecommerce-operations.html"><img src="assets/ecommerce-dashboard.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/mediads786/ecommerce-ops-control-center/main/public/screenshots/dashboard.png'" alt="E-commerce operations dashboard showing orders, revenue, pending work and low-stock indicators" loading="lazy"><span class="image-corner" aria-hidden="true">↗</span></a>
+            <div class="project-content"><div class="project-meta"><span>COMMERCE</span></div><h3>E-commerce Operations Control Center</h3><p>Keep orders, stock and operational reporting consistent.</p><div class="project-links"><a href="projects/ecommerce-operations.html">Explore Project <span aria-hidden="true">↗</span></a></div></div>
           </article>
-          <article class="project-card">
-            <a class="project-image processlens-image" href="https://processlens-rouge.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open ProcessLens application in new tab"><img src="assets/processlens-overview.jpg" alt="ProcessLens application overview showing the AS-IS, findings and TO-BE workflow stages" loading="lazy"><span class="image-corner" aria-hidden="true">↗</span></a>
-            <div class="project-content"><div class="project-meta"><span>PROCESS IMPROVEMENT</span><span class="project-tag">LIVE APPLICATION</span></div><h3>ProcessLens</h3><p>Turn a written process into an editable AS-IS map, review suggested improvements, and create a human-approved TO-BE workflow with export options.</p><div class="project-stack">FASTAPI <span>·</span> AI-ASSISTED ANALYSIS <span>·</span> LOCAL FALLBACK</div><div class="project-links"><a href="https://processlens-rouge.vercel.app/" target="_blank" rel="noopener noreferrer">Explore application <span aria-hidden="true">↗</span></a><a href="https://github.com/mediads786/processlens" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          <article class="project-card" id="friofix" data-categories="systems">
+            <a aria-label="Explore FrioFix" class="project-image friofix-image" href="projects/friofix.html"><img src="assets/friofix-dashboard.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/mediads786/service-triage-copilot/main/docs/images/dashboard.png'" alt="FrioFix field-service operations dashboard showing service activity and job status" loading="lazy"><span class="image-corner" aria-hidden="true">↗</span></a>
+            <div class="project-content"><div class="project-meta"><span>FIELD SERVICE</span></div><h3>FrioFix</h3><p>Coordinate service intake, human review and mechanic assignments.</p><div class="project-links"><a href="projects/friofix.html">Explore Project <span aria-hidden="true">↗</span></a></div></div>
           </article>
-          <article class="project-card order-gateway-card" id="order-gateway-n8n" aria-labelledby="order-gateway-title">
-            <a class="project-image order-gateway-image" href="assets/order-gateway-n8n-workflows.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open genuine Order Gateway n8n workflow screenshots at full resolution in a new tab"><img src="assets/order-gateway-n8n-workflows.jpg" alt="Genuine screenshots of the existing Shopify order-intake and ERP delivery workflows in n8n. The delivery worker uses mock ERP by default." loading="lazy" width="2140" height="1160"><span class="evidence-image-caption">Actual workflow screenshots · open full image</span><span class="image-corner" aria-hidden="true">↗</span></a>
-            <div class="project-content">
-              <div class="project-meta"><span>ORDER INTEGRATION</span><span class="project-tag">VERIFIED INTEGRATION · PUBLIC SOURCE</span></div>
-              <h3 id="order-gateway-title">Order Gateway — n8n + PostgreSQL</h3>
-              <p>Keep accepted orders safe, prevent duplicate processing, and make failed ERP deliveries visible and recoverable.</p>
-              <p>Authenticated Shopify orders are stored in PostgreSQL, then delivered through n8n with scheduled retries, dead-letter recovery and an audit trail. Gmail and WhatsApp alerts keep operators informed when delivery fails.</p>
-              <ul class="project-evidence" aria-label="Verified integration evidence">
-                <li><strong>Real Shopify → Odoo.</strong> Order #1018 became draft quotation S00048. Replaying the signed webhook created no duplicate.</li>
-                <li><strong>Recovery tested.</strong> Concurrent intake, scheduled retries, dead-letter recovery, mock crash reconciliation and restart persistence passed.</li>
-                <li><strong>WhatsApp delivery verified.</strong> Meta accepted the custom alert template, and the recipient confirmed receipt.</li>
-              </ul>
-              <p class="project-scope">The default demonstration uses mock ERP. The real Odoo integration was tested separately with a draft quotation; the QA report records the tested scope and remaining limitations.</p>
-              <div class="project-stack">N8N <span>·</span> POSTGRESQL <span>·</span> SHOPIFY <span>·</span> ODOO <span>·</span> DOCKER</div>
-              <div class="project-links"><a href="https://github.com/mediads786/order-gateway-n8n" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a><a href="https://github.com/mediads786/order-gateway-n8n/blob/main/docs/QA-TEST-REPORT.md" target="_blank" rel="noopener noreferrer">Read verified QA <span aria-hidden="true">↗</span></a></div>
-            </div>
-            <div class="order-gateway-evidence" aria-label="Genuine retained project evidence">
-              <figure>
-                <a class="evidence-link" href="assets/order-gateway-n8n-execution-1131.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open genuine successful intake execution 1131 at full resolution in a new tab"><img src="assets/order-gateway-n8n-execution-1131.jpg" width="1850" height="720" alt="Actual saved n8n execution 1131, succeeded in 2.286 seconds, with the authenticated Shopify intake path highlighted green." loading="lazy"></a>
-                <figcaption><strong>A successful saved execution.</strong> Intake #1131 processed the real Shopify order on 12 October 2026. This is the existing execution record; no workflow was rerun for these images. Open the image to inspect the full-resolution capture.</figcaption>
-              </figure>
-              <figure>
-                <a class="evidence-link" href="assets/order-gateway-n8n-outcome.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open genuine Shopify and saved Odoo outcome evidence at full resolution in a new tab"><img src="assets/order-gateway-n8n-outcome.jpg" width="1400" height="630" alt="Existing Shopify order 1018 screenshot paired with genuine Odoo readback crops from successful n8n execution 1132, showing draft quotation S00048 and its amounts." loading="lazy"></a>
-                <figcaption><strong>A recorded business outcome.</strong> Shopify #1018 → Odoo draft S00048. The Odoo evidence comes from retained n8n readback because Odoo was stopped during capture; its quotation screen was not recreated. Customer details and credentials are excluded.</figcaption>
-              </figure>
-            </div>
+          <article class="project-card" id="farmflow" data-categories="systems">
+            <a aria-label="Explore FarmFlow" class="project-image farmflow-image" href="projects/farmflow.html"><img src="assets/farmflow-dashboard.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/mediads786/FarmFlow/main/docs/screenshots/dashboard.png'" alt="FarmFlow cattle operations dashboard showing inventory, shipment readiness and reporting" loading="lazy"><span class="image-corner" aria-hidden="true">↗</span></a>
+            <div class="project-content"><div class="project-meta"><span>AGRICULTURE</span></div><h3>FarmFlow</h3><p>Track cattle from purchase through inventory and shipment.</p><div class="project-links"><a href="projects/farmflow.html">Explore Project <span aria-hidden="true">↗</span></a></div></div>
+          </article>
+          <article class="project-card" id="processlens" data-categories="analysis">
+            <a aria-label="Explore ProcessLens" class="project-image processlens-image" href="projects/processlens.html"><img src="assets/processlens-overview.jpg" alt="ProcessLens application overview showing the AS-IS, findings and TO-BE workflow stages" loading="lazy"><span class="image-corner" aria-hidden="true">↗</span></a>
+            <div class="project-content"><div class="project-meta"><span>PROCESS IMPROVEMENT</span></div><h3>ProcessLens</h3><p>Turn written processes into maps and approved improvements.</p><div class="project-links"><a href="projects/processlens.html">Explore Project <span aria-hidden="true">↗</span></a></div></div>
           </article>
         </div>
 
-        <div class="automation-proof" style="margin-top:2.5rem;">
-          <div class="section-heading" style="margin-bottom:1.25rem;">
-            <div>
-              <p class="section-kicker">OTHER N8N AUTOMATION EXAMPLES</p>
-              <h3 style="margin:0;">Lead processing and inventory monitoring.</h3>
-            </div>
-            <p class="section-intro">Additional workflow examples for reviewing incoming leads and monitoring low stock, with validation, duplicate checks, human review and notifications. Open either image to inspect the workflow at full resolution.</p>
-          </div>
-
-          <div class="automation-gallery">
-            <figure style="margin:0;">
-              <a class="automation-image" href="assets/n8n-ai-lead-processing-clean.png" target="_blank" rel="noopener noreferrer" aria-label="Open AI-assisted lead processing workflow at full resolution in a new tab">
-                <img src="assets/n8n-ai-lead-processing-clean.png" alt="n8n AI-assisted lead processing workflow with validation, duplicate checking, AI assessment, priority routing, human review, storage and notifications" loading="lazy">
-              </a>
-              <figcaption style="margin-top:.65rem;font-size:.92rem;line-height:1.45;"><strong>AI-assisted lead processing</strong> — validates incoming leads, prevents duplicates, uses AI classification, routes priority cases, supports human review, and records results with failure handling.</figcaption>
-            </figure>
-
-            <figure style="margin:0;">
-              <a class="automation-image" href="assets/n8n-low-stock-alert-clean.png" target="_blank" rel="noopener noreferrer" aria-label="Open low-stock monitoring workflow at full resolution in a new tab">
-                <img src="assets/n8n-low-stock-alert-clean.png" alt="n8n ecommerce low-stock monitoring workflow with duplicate alert prevention, email notification and logging" loading="lazy">
-              </a>
-              <figcaption style="margin-top:.65rem;font-size:.92rem;line-height:1.45;"><strong>Low-stock monitoring</strong> — scheduled inventory checks, low-stock detection, duplicate-alert prevention, management notification, and logging.</figcaption>
-            </figure>
-          </div>
-        </div>
+        <p class="automation-examples-link"><a class="text-link" href="projects/automation-examples.html">Other automation examples <span aria-hidden="true">↗</span></a></p>
 
         <p class="project-footnote">The screenshots and public demos illustrate project functionality. Read-only demonstrations do not permit changes to live operational data.</p>
       </div>
