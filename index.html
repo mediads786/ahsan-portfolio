@@ -115,30 +115,24 @@
         <div class="automation-proof" style="margin-top:2.5rem;">
           <div class="section-heading" style="margin-bottom:1.25rem;">
             <div>
-              <p class="section-kicker">AUTOMATION ENGINEERING EXAMPLES</p>
-              <h3 style="margin:0;">Real n8n workflows built around business rules, controls and failure handling.</h3>
+              <p class="section-kicker">OTHER N8N AUTOMATION EXAMPLES</p>
+              <h3 style="margin:0;">Lead processing and inventory monitoring.</h3>
             </div>
-            <p class="section-intro">Examples include webhook/API intake, validation, duplicate prevention, AI-assisted routing, human review, centralized error handling, scheduled retries, notifications, and persistent workflow state.</p>
+            <p class="section-intro">Additional workflow examples for reviewing incoming leads and monitoring low stock, with validation, duplicate checks, human review and notifications. Open either image to inspect the workflow at full resolution.</p>
           </div>
 
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.25rem;">
+          <div class="automation-gallery">
             <figure style="margin:0;">
-              <img src="assets/n8n-ai-lead-processing-clean.png" alt="n8n AI-assisted lead processing workflow with validation, duplicate checking, AI assessment, priority routing, human review, storage and notifications" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(16,29,42,.12);display:block;">
+              <a class="automation-image" href="assets/n8n-ai-lead-processing-clean.png" target="_blank" rel="noopener noreferrer" aria-label="Open AI-assisted lead processing workflow at full resolution in a new tab">
+                <img src="assets/n8n-ai-lead-processing-clean.png" alt="n8n AI-assisted lead processing workflow with validation, duplicate checking, AI assessment, priority routing, human review, storage and notifications" loading="lazy">
+              </a>
               <figcaption style="margin-top:.65rem;font-size:.92rem;line-height:1.45;"><strong>AI-assisted lead processing</strong> — validates incoming leads, prevents duplicates, uses AI classification, routes priority cases, supports human review, and records results with failure handling.</figcaption>
             </figure>
 
             <figure style="margin:0;">
-              <img src="assets/n8n-central-error-handler-clean.png" alt="n8n centralized error handler workflow normalizing and classifying errors, logging them and preparing transient failures for retry" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(16,29,42,.12);display:block;">
-              <figcaption style="margin-top:.65rem;font-size:.92rem;line-height:1.45;"><strong>Central error handler</strong> — normalizes and classifies failures, separates transient/permanent conditions, logs the event, and prepares retryable work.</figcaption>
-            </figure>
-
-            <figure style="margin:0;">
-              <img src="assets/n8n-retry-worker-clean.png" alt="n8n scheduled retry worker that checks queued retries, evaluates eligibility, parses payloads, routes work and updates status" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(16,29,42,.12);display:block;">
-              <figcaption style="margin-top:.65rem;font-size:.92rem;line-height:1.45;"><strong>Scheduled retry worker</strong> — checks queued retry records, evaluates retry eligibility, parses the stored payload, routes work to the correct process, and updates retry status.</figcaption>
-            </figure>
-
-            <figure style="margin:0;">
-              <img src="assets/n8n-low-stock-alert-clean.png" alt="n8n ecommerce low-stock monitoring workflow with duplicate alert prevention, email notification and logging" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(16,29,42,.12);display:block;">
+              <a class="automation-image" href="assets/n8n-low-stock-alert-clean.png" target="_blank" rel="noopener noreferrer" aria-label="Open low-stock monitoring workflow at full resolution in a new tab">
+                <img src="assets/n8n-low-stock-alert-clean.png" alt="n8n ecommerce low-stock monitoring workflow with duplicate alert prevention, email notification and logging" loading="lazy">
+              </a>
               <figcaption style="margin-top:.65rem;font-size:.92rem;line-height:1.45;"><strong>Low-stock monitoring</strong> — scheduled inventory checks, low-stock detection, duplicate-alert prevention, management notification, and logging.</figcaption>
             </figure>
           </div>
