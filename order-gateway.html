@@ -39,33 +39,33 @@
       </div>
       <section class="detail-section" aria-labelledby="problem-title">
         <h2 id="problem-title">The problem</h2>
-        <p>When a store sends orders to an ERP, the usual failures are quiet ones: a webhook arrives twice and creates two orders, the ERP is down for ten minutes and orders vanish, or someone fixes a failed order by hand and nobody knows what changed. I come from 25+ years of running operations, so I built the tool I would have wanted: an integration layer where no order is lost or duplicated, and every action can be traced.</p>
+        <p>When a store sends orders to an ERP, the usual failures are quiet ones: a webhook arrives twice and creates two orders, the ERP is down for ten minutes and orders vanish, or someone fixes a failed order by hand and nobody knows what changed. I come from 25+ years of running operations, so I built the tool I would have wanted: an integration layer with durable order intake, duplicate detection, recoverable delivery and an audit history operators can inspect.</p>
       </section>
       <section class="detail-section" aria-labelledby="capabilities-title">
         <h2 id="capabilities-title">What it does</h2>
         <ul>
           <li>Receives Shopify webhooks and verifies the HMAC signature. Unsigned or tampered requests are refused.</li>
-          <li>Handles duplicates safely. A repeated webhook creates exactly one order, one job and one ERP order. The same webhook ID with a changed payload is refused.</li>
+          <li>Detects repeated deliveries using the webhook ID and payload hash. In recorded same-ID replay tests, the gateway retained one order and job, with one mock ERP outcome; a sequential Odoo replay also retained one ERP order. The same webhook ID with a changed payload is refused.</li>
           <li>Processes orders through a database-backed queue with a worker, automatic retries, dead-letter handling, recovery of stuck jobs, and a manual retry.</li>
           <li>Pushes confirmed orders to an ERP through an adapter. A mock ERP is included for demos, and a real adapter for Odoo 19 Community was verified live.</li>
-          <li>Gives operators admin pages with a full audit trail, plus approval-governed actions (for example, cancelling an order needs an approver) and natural-language proposals that are reviewed before anything executes.</li>
+          <li>Gives operators admin pages with order and workflow histories, plus approval-governed actions (for example, cancelling an order needs a different approving API key) and natural-language proposals that a person reviews before execution.</li>
         </ul>
       </section>
       <section class="detail-section" aria-labelledby="proof-title">
         <h2 id="proof-title">Proof it works</h2>
         <ul>
-          <li>A real Shopify dev-store order was confirmed in Odoo with matching lines, quantities and totals (20/20 checks).</li>
-          <li>284 automated tests pass offline, and GitHub Actions CI runs on every push.</li>
-          <li>Currency amounts are preserved exactly (a USD 10.00 order stays USD 10.00).</li>
+          <li>In my local test on 15 October 2026, Shopify dev-store order #1021 reached confirmed Odoo sales order S00054. Screenshots show matching BOOK/PEN lines, quantities, prices and a USD 60.00 total; the gateway job completed on its first attempt.</li>
+          <li>The recorded 15 October regression run passed 284 tests, with one optional live-Odoo test skipped. GitHub Actions runs the suite on pushes to master and pull requests.</li>
+          <li>The AWS replay fixture preserved its USD 10.00 amount through the gateway and mock ERP. Stored local line sums also matched order totals in the 17 October read-only review.</li>
         </ul>
       </section>
       <section class="detail-section" aria-labelledby="deployment-title">
-        <h2 id="deployment-title">Deployed on AWS, and tested like production</h2>
+        <h2 id="deployment-title">AWS deployment and operational checks</h2>
         <ul>
           <li>Runs on a single EC2 instance with Docker Compose, with Caddy providing trusted HTTPS, an HTTP-to-HTTPS redirect and security headers.</li>
-          <li>Only the proxy is exposed publicly. The firewall, container health checks, restart policies and log rotation were all verified, and the instance enforces IMDSv2.</li>
+          <li>Only Caddy publishes application ports from the containers. The firewall, container health checks, restart policies and log rotation were all verified, and the instance enforces IMDSv2.</li>
           <li>Nightly database backups have restricted permissions and an integrity check. I restored a backup into a temporary database and confirmed the row counts matched across all 11 tables.</li>
-          <li>A full smoke test (HTTPS, authentication, signed order to CONFIRMED) passes on the live deployment.</li>
+          <li>The 15–16 October deployment checks passed the smoke test for HTTPS, authentication and a signed sample order reaching CONFIRMED through the mock ERP.</li>
         </ul>
       </section>
       <section class="detail-section" aria-labelledby="stack-title">
@@ -74,11 +74,11 @@
       </section>
       <section class="detail-section" aria-labelledby="scope-title">
         <h2 id="scope-title">Scope note</h2>
-        <p>Tax calculation sync is not included. Tax settings in the ERP are configured separately.</p>
+        <p>Tax calculation sync is not included. Tax settings in the ERP are configured separately. The deployment uses a single host; high availability, sustained load and replacement-host recovery were not established. Off-server backups were not configured in the recorded deployment. Odoo lookup/create concurrency and stale-worker result fencing remain implementation limits; the replay results above are scoped tests, not a universal exactly-once guarantee.</p>
       </section>
       <section class="detail-section" aria-labelledby="links-title">
         <h2 id="links-title">Links:</h2>
-        <p class="media-links"><a href="https://github.com/mediads786/order-gateway" target="_blank" rel="noopener noreferrer">Code: github.com/mediads786/order-gateway</a></p>
+        <p class="media-links"><a href="https://github.com/mediads786/order-gateway" target="_blank" rel="noopener noreferrer">Code: github.com/mediads786/order-gateway</a><a href="https://github.com/mediads786/order-gateway/blob/master/docs/verification-summary.md" target="_blank" rel="noopener noreferrer">Verified results and scope</a></p>
       </section>
     </article>
   </main>
