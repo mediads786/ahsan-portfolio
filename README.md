@@ -27,10 +27,10 @@ For inquiries, use the contact details on the site.
 
 The selected-work entry links to [the public project repository](https://github.com/mediads786/order-gateway-n8n) and its [verified QA report](https://github.com/mediads786/order-gateway-n8n/blob/main/docs/QA-TEST-REPORT.md). It describes durable order intake, duplicate prevention, recoverable ERP delivery and operational alerts. The four pre-existing portfolio project cards are preserved.
 
-The three evidence images in `assets/` contain genuine screenshot crops, captured or inspected on 13 October 2026:
+The three evidence images in `assets/` contain genuine retained screenshot crops:
 
 - `order-gateway-n8n-workflows.jpg`: arranged screenshots of the existing Module 01 intake and Module 02 default mock-delivery workflow canvases.
-- `order-gateway-n8n-execution-1131.jpg`: native saved execution #1131, successful Shopify intake on 12 October 2026; no execution was rerun for the capture.
+- `order-gateway-n8n-execution-1131.jpg`: native saved execution #1131, successful Shopify intake; no execution was rerun for the capture.
 - `order-gateway-n8n-outcome.jpg`: the retained Shopify #1018 screenshot paired with native saved Odoo readback crops and the success status of execution #1132. The readback shows quotation S00048, draft state and USD amounts. Odoo was stopped during capture, so its quotation interface was not captured or reconstructed.
 
 The flattened JPEG evidence sheets contain only the privacy-safe screenshot crops. Captions and arrangement were added; workflow nodes, execution statuses and result values were not fabricated. Customer information, credentials, tokens and request payloads are excluded. The default worker uses mock ERP; the real Odoo draft test and signed replay are separate verified evidence. Remaining limitations are recorded in the linked QA report.
@@ -42,11 +42,11 @@ The homepage contains six projects, with All Projects selected by default. Filte
 
 Both Order Gateway implementations have separate cross-linked case studies under `projects/`. The existing n8n screenshots and verified evidence are retained on its detail page. The API card uses the current styled interface, not the earlier unstyled GIF.
 
-The new API recording is a 42-second edit of actual captures from 13 October 2026. It combines a two-order local mock demo (normal delivery, replay, three HTTP 500 retries, recovery on attempt 4) and a separate signed synthetic Shopify fixture sent through the existing public tunnel (acceptance, first-attempt delivery and same-ID replay). It does not claim a real Shopify-emitted order or live Odoo operations in this recording. One tunnel response exceeded the capture script's fault-stage timing window; the fixture delivered on attempt 1, and the edit labels that separately from mock recovery.
+The API recording is an edit of actual application captures. It combines a two-order local mock demo (normal delivery, replay, three HTTP 500 retries, recovery on attempt 4) and a separate signed synthetic Shopify fixture sent through the existing public tunnel (acceptance, first-attempt delivery and same-ID replay). It does not claim a real Shopify-emitted order or live Odoo operations in this recording. One tunnel response exceeded the capture script's fault-stage timing window; the fixture delivered on attempt 1, and the edit labels that separately from mock recovery.
 
 Public media: `order-gateway-api-card.jpg`, `order-gateway-api-current-demo.mp4`, and `order-gateway-api-current-demo.gif`. Customer fields are concealed; authentication was completed before capture. No API/n8n business logic, secrets, subscriptions, database volumes or frontend design were changed. Three synthetic orders were added and retained. Fingerprints verified every pre-existing row in all ten business tables remained unchanged. Historical Odoo and CI evidence is linked with its original scope.
 
-The project arrangement and media were reviewed and approved for publication on 13 October 2026.
+The project arrangement and media were reviewed and approved for publication.
 
 
 ## Gallery layout
@@ -58,8 +58,12 @@ All six projects have detail pages. Existing descriptions, technology stacks, de
 The n8n homepage preview uses the existing genuine intake-canvas capture, contained within the same preview frame to avoid cutting through the workflow. The full intake/delivery evidence sheet remains on its detail page. Rendered checks at 1440px desktop, 834px tablet and 390px phone confirmed equal card heights, functioning filters and no horizontal overflow. Desktop measurements were 36px column gap, 56px row gap, 28px padding and approximately 222px previews.
 
 
-## Gateway evidence checkpoint — 17 October 2026
+## Gateway evidence and scope
 
-The homepage links the API to `order-gateway.html`, the current case study covering its foundations, local Shopify-to-Odoo confirmation, AWS mock-ERP deployment and dated evidence reconciliation. `projects/order-gateway-api.html` preserves the historical 13 October recording and links back to the current case study. `projects/order-gateway-n8n.html` records its separate draft-Odoo outcome, reliability tests and Gmail/WhatsApp verification, including the owner’s post-template-approval workflow test.
+The homepage links the API to `order-gateway.html`, the current case study covering its foundations, local Shopify-to-Odoo confirmation, AWS mock-ERP deployment and retained evidence reconciliation. `projects/order-gateway-api.html` preserves the recorded local demonstration and links back to the current case study. `projects/order-gateway-n8n.html` records its separate draft-Odoo outcome, reliability tests and Gmail/WhatsApp verification, including the owner’s post-template-approval workflow test.
 
 These pages distinguish historical tests from later read-only reviews and keep implementation-specific scope. Existing media, other projects, shared styling and scripts are unchanged. Private evidence and deployment addresses are excluded.
+
+Public portfolio copy describes capabilities and verified outcomes without calendar-based development timelines or delivery-duration estimates. Test dates and revision provenance remain in the linked verification records and the private local baseline.
+
+Public media conceals dates, timestamps and execution-duration labels using precise masks. The unmodified originals and a per-frame mask record are preserved privately. Workflow nodes, order amounts, statuses, attempts and demonstrated outcomes are unchanged.
