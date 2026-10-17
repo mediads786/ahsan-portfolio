@@ -56,3 +56,10 @@ The six-project homepage keeps its capability filters and two desktop columns. C
 All six projects have detail pages. Existing descriptions, technology stacks, demonstration boundaries and external links are retained there. The two Order Gateway case studies preserve their QA/media and reciprocal implementation links. The supporting automation screenshots remain on `projects/automation-examples.html`, and the low-stock example also appears on the E-commerce detail page. No technical content or project was removed.
 
 The n8n homepage preview uses the existing genuine intake-canvas capture, contained within the same preview frame to avoid cutting through the workflow. The full intake/delivery evidence sheet remains on its detail page. Rendered checks at 1440px desktop, 834px tablet and 390px phone confirmed equal card heights, functioning filters and no horizontal overflow. Desktop measurements were 36px column gap, 56px row gap, 28px padding and approximately 222px previews.
+
+
+## Gateway evidence checkpoint — 17 October 2026
+
+The homepage links the API to `order-gateway.html`, the current case study covering its foundations, local Shopify-to-Odoo confirmation, AWS mock-ERP deployment and dated evidence reconciliation. `projects/order-gateway-api.html` preserves the historical 13 October recording and links back to the current case study. `projects/order-gateway-n8n.html` records its separate draft-Odoo outcome, reliability tests and Gmail/WhatsApp verification, including the owner’s post-template-approval workflow test.
+
+These pages distinguish historical tests from later read-only reviews and keep implementation-specific scope. Existing media, other projects, shared styling and scripts are unchanged. Private evidence and deployment addresses are excluded.
